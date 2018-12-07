@@ -6,7 +6,7 @@ RUN yum install -y php-fpm php-gd php-mysql php-mbstring php-curl \
     && sed -i 's/display_errors = Off/display_errors = On/' /etc/php.ini \
     && sed -i 's/display_startup_errors = Off/display_startup_errors = On/' /etc/php.ini \
     && sed -i 's/log_errors = Off/log_errors = On/' /etc/php.ini \
-    && sed -i 's/;date.timezone =/date.timezone = Asia/Shanghai/' /etc/php.ini
+    && sed -i 's/;date.timezone =/date.timezone = Asia\/Shanghai/' /etc/php.ini
 
 EXPOSE 9000
 

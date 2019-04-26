@@ -6,12 +6,12 @@ RUN yum install -y php-fpm php-gd php-mysql php-mbstring php-curl \
     && sed -i 's/display_errors = Off/display_errors = On/' /etc/php.ini \
     && sed -i 's/display_startup_errors = Off/display_startup_errors = On/' /etc/php.ini \
     && sed -i 's/log_errors = Off/log_errors = On/' /etc/php.ini \
-    && sed -i 's/;date.timezone =/date.timezone = Asia\/Shanghai/' /etc/opt/remi/php71/php.ini \
-    && sed -i 's/max_execution_time = 30/max_execution_time = 300/' /etc/opt/remi/php71/php.ini \
-    && sed -i 's/max_input_time = 30/max_input_time = 300/' /etc/opt/remi/php71/php.ini \
-    && sed -i 's/post_max_size = 8M/post_max_size = 128M/' /etc/opt/remi/php71/php.ini \
-    && sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 128M/' /etc/opt/remi/php71/php.ini \
-    && sed -i 's/memory_limit = 128M/memory_limit = 1024M/' /etc/opt/remi/php71/php.ini \
+    && sed -i 's/;date.timezone =/date.timezone = Asia\/Shanghai/' /etc/php.ini \
+    && sed -i 's/max_execution_time = 30/max_execution_time = 300/' /etc/php.ini \
+    && sed -i 's/max_input_time = 30/max_input_time = 300/' /etc/php.ini \
+    && sed -i 's/post_max_size = 8M/post_max_size = 128M/' /etc/php.ini \
+    && sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 128M/' /etc/php.ini \
+    && sed -i 's/memory_limit = 128M/memory_limit = 1024M/' /etc/php.ini \
     && sed -i 's/short_open_tag = Off/short_open_tag = On/' /etc/php.ini \
     && mkdir /var/lib/php/session -p \
     && chown apache:apache /var/lib/php/session
